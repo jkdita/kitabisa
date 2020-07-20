@@ -6,17 +6,17 @@ import (
 	"os"
 )
 
-func sum(x, y int) int {
+func Sum(x, y int) int {
 	result := x + y
 	return result
 }
 
-func multiply(x, y int) int {
+func Multiply(x, y int) int {
 	result := x * y
 	return result
 }
 
-func prime(input int) []int {
+func Prime(input int) []int {
 	var result []int
 	count := 1
 	i := 1
@@ -36,7 +36,7 @@ func prime(input int) []int {
 	return result
 }
 
-func fibonacci(input int) []int {
+func Fibonacci(input int) []int {
 	var result []int
 	for i := 0; i < input; i++ {
 		result = append(result, fib(i))
@@ -69,27 +69,27 @@ func main() {
 			fmt.Print("Input x, y : ")
 			fmt.Scanf("%d", &x)
 			fmt.Scanf("%d", &y)
-			result := sum(x, y)
+			result := Sum(x, y)
 			fmt.Printf("Output %d + %d : %d\n", x, y, result)
 
 		case 2:
 			fmt.Print("Input x, y : ")
 			fmt.Scanf("%d", &x)
 			fmt.Scanf("%d", &y)
-			result := multiply(x, y)
+			result := Multiply(x, y)
 			fmt.Printf("Output %d x %d : %d\n", x, y, result)
 
 		case 3:
 			var input int
 			fmt.Print("Input : ")
 			fmt.Scanf("%d", &input)
-			result := prime(input)
+			result := Prime(input)
 			fmt.Printf("Output : %v\n", result)
 
 		case 4:
 			fmt.Print("Input : ")
 			fmt.Scanf("%d", &input)
-			result := fibonacci(input)
+			result := Fibonacci(input)
 			fmt.Printf("Output : %v\n", result)
 
 		case 5:
